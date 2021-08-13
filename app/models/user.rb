@@ -13,7 +13,7 @@ class User < ApplicationRecord
     validates :birth_date
 
     with_options format: { with: VALID_PASSWORD_REGEX } do
-       validates :password
+      validates :password
     end
 
     with_options format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ } do
