@@ -54,7 +54,6 @@
 
 - belongs_to :orders
 
-##  purchase_records  テーブル
 ##  orders  テーブル
 
 | Column    | Type        | options                          |
