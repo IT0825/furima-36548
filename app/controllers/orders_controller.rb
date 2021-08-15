@@ -5,6 +5,10 @@ class OrdersController < ApplicationController
     @item = Item.find(params[:item_id])
   end
 
+  def create
+    
+  end
+
   def order_params
     params.require(:order).merge(user_id: current_user.id, item_id: params[:item_id])
   end
