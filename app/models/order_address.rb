@@ -22,4 +22,5 @@ class OrderAddress
       order = Order.create(user_id: user_id, item_id: item_id)
       Address.create(postcode: postcode, prefecture_id: prefecture_id, city: city, block: block, building: building, phone_number: phone_number, order_id: order_id)
     end
+  end
 end
