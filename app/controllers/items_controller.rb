@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
 
   def show
     if user_signed_in?
-      if @item.order.present?
+      if current_user != @item.user && @item.order.present?
         redirect_to root_path
       else
       end
@@ -33,6 +33,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    if current_user == @item.user && @item.order.present?
+      redirect_to root_path
+    end
   end
 
   def update
