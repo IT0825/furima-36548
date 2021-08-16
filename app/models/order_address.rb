@@ -13,7 +13,7 @@ class OrderAddress
     with_options numericality: { other_than: 0, message: "can't be blank" } do
       validates :prefecture_id
     end
-    with_options numericality: { with: /\A\d{10}$|^\d{11}\z/ } do
+    with_options format: { with: /\A\d{10,11}\z/ } do
       validates :phone_number
     end
   end
