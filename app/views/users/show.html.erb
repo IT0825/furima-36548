@@ -1,6 +1,24 @@
 <%= render "shared/header" %>
     <div class='item-contents'>
-    <h2 class='title'>マイページ</h2>
+    <h2 class="page-heading">
+        <%= "#{@user.last_name}""#{@user.first_name}さんの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">ニックネーム</th>
+            <td class="table__col2"><%= @user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">メールアドレス</th>
+            <td class="table__col2"><%= @user.email %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">誕生日</th>
+            <td class="table__col2"><%= @user.birth_date %></td>
+          </tr>
+        </tbody>
+      </table>
     <div class="subtitle" >
       出品一覧
     </div>
